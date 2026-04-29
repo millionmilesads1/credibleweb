@@ -1,89 +1,86 @@
-import { Metadata } from "next";
-import Link from "next/link";
-import { CheckCircle2, Smartphone, Layout, Zap, MessagesSquare, ShieldCheck, ArrowRight } from "lucide-react";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Website Design Services for Businesses | CredibleWeb",
-  description: "Professional Website Design for Businesses That Need Trust, Speed & Leads. Get a mobile-first, SEO-ready website.",
-};
+import React from "react";
+import { CheckCircle2, Smartphone, Zap, Palette, ArrowUpRight } from "lucide-react";
+import { BlurText } from "@/components/ui/blur-text";
+import Link from "next/link";
 
 export default function WebsiteDesignPage() {
   return (
-    <div className="pt-24 pb-20 bg-white min-h-screen">
-      {/* Hero */}
-      <section className="bg-gradient-to-b from-blue-50 to-white pb-16 pt-8">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-[#071E49] mb-6">
-              Professional Website Design for Businesses That Need <span className="text-[#1266F1]">Trust, Speed & Leads</span>
-            </h1>
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              We build fast loading, mobile-first business websites that establish credibility and are structured with a strong SEO foundation to capture more leads. Pricing starts from ₹25,000.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-flex justify-center items-center gap-2 rounded-full bg-[#1266F1] px-6 py-3.5 text-base font-semibold text-white shadow-sm hover:bg-blue-600 transition-all"
-            >
-              Get Free Website Growth Review
-              <ArrowRight className="h-5 w-5" />
-            </Link>
+    <div className="bg-black min-h-screen text-white pt-32 pb-20 overflow-hidden font-body font-light">
+      <div className="px-6 md:px-12 lg:px-24">
+        <div className="max-w-4xl mb-20">
+          <div className="liquid-glass rounded-full px-3.5 py-1 text-xs font-medium text-white mb-8 inline-block">
+            Core Service
           </div>
+          <BlurText 
+            text="Professional Website Design & Redesign" 
+            className="text-5xl md:text-6xl lg:text-7xl font-heading italic text-white leading-[0.9] tracking-tight mb-8"
+            delay={0.1}
+          />
+          <p className="text-white/60 text-lg md:text-xl leading-relaxed max-w-2xl">
+            We don&apos;t just build websites; we create digital assets that build trust and convert visitors into customers. Fast, responsive, and SEO-ready.
+          </p>
         </div>
-      </section>
 
-      {/* Features */}
-      <section className="py-16">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-              <Layout className="h-8 w-8 text-[#1266F1] mb-4" />
-              <h3 className="text-xl font-bold text-[#071E49] mb-2">Professional Layout</h3>
-              <p className="text-gray-600 text-sm">Clean, modern business websites designed to build instant trust with your visitors.</p>
+        <div className="grid lg:grid-cols-2 gap-16 items-start mb-32">
+          <div className="space-y-12">
+            <div className="space-y-6">
+              <h2 className="text-4xl font-heading italic text-white tracking-tight">Our Design Philosophy</h2>
+              <p className="text-white/60 text-base leading-relaxed">
+                In today&apos;s market, your website is your primary salesperson. If it looks outdated or is hard to navigate on a phone, you&apos;re losing money every single day.
+              </p>
             </div>
-            <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-              <Smartphone className="h-8 w-8 text-[#1266F1] mb-4" />
-              <h3 className="text-xl font-bold text-[#071E49] mb-2">Mobile-First Design</h3>
-              <p className="text-gray-600 text-sm">Fully responsive designs ensuring your site looks and performs perfectly on phones.</p>
-            </div>
-            <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-              <Zap className="h-8 w-8 text-[#1266F1] mb-4" />
-              <h3 className="text-xl font-bold text-[#071E49] mb-2">Fast Loading</h3>
-              <p className="text-gray-600 text-sm">Optimized code and assets so pages load quickly, keeping visitors engaged.</p>
-            </div>
-            <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-              <ShieldCheck className="h-8 w-8 text-[#1266F1] mb-4" />
-              <h3 className="text-xl font-bold text-[#071E49] mb-2">SEO-Ready Structure</h3>
-              <p className="text-gray-600 text-sm">Built with search engines in mind. Proper headings, schema, and meta structures.</p>
-            </div>
-            <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-              <MessagesSquare className="h-8 w-8 text-[#1266F1] mb-4" />
-              <h3 className="text-xl font-bold text-[#071E49] mb-2">WhatsApp/Call CTA</h3>
-              <p className="text-gray-600 text-sm">Clear, sticky call-to-actions to make reaching out incredibly easy for prospects.</p>
-            </div>
-            <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
-              <CheckCircle2 className="h-8 w-8 text-[#1266F1] mb-4" />
-              <h3 className="text-xl font-bold text-[#071E49] mb-2">Lead Forms</h3>
-              <p className="text-gray-600 text-sm">Strategically placed lead forms on service pages to capture visitor details efficiently.</p>
+            
+            <div className="space-y-4">
+              {[
+                "Mobile-First Responsive Design",
+                "Conversion-Optimized Layouts",
+                "Lightning Fast Loading Speeds",
+                "Integrated WhatsApp Enquiry Flows",
+                "Clean, Modern Minimalist Aesthetic",
+                "Easy-to-Manage Content Structures"
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-3 text-white/80">
+                  <CheckCircle2 className="h-5 w-5 text-white" />
+                  <span>{item}</span>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* CTA */}
-      <section className="py-16 bg-[#071E49] text-white">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold tracking-tight mb-6">Need a professional website for your business?</h2>
-          <p className="text-blue-200 mb-8 max-w-2xl mx-auto">
-            Stop losing potential customers to competitors with better websites. Let&apos;s build a digital asset that works for you 24/7.
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="liquid-glass rounded-2xl p-8 border border-white/5">
+              <Smartphone className="h-8 w-8 text-white mb-6" />
+              <h3 className="font-heading italic text-white text-2xl mb-2">Responsive</h3>
+              <p className="text-sm text-white/50">Perfectly optimized for every screen size, from smartphones to desktops.</p>
+            </div>
+            <div className="liquid-glass rounded-2xl p-8 border border-white/5">
+              <Zap className="h-8 w-8 text-white mb-6" />
+              <h3 className="font-heading italic text-white text-2xl mb-2">Fast</h3>
+              <p className="text-sm text-white/50">Optimized code and image compression for near-instant load times.</p>
+            </div>
+            <div className="liquid-glass rounded-2xl p-8 border border-white/5 sm:col-span-2">
+              <Palette className="h-8 w-8 text-white mb-6" />
+              <h3 className="font-heading italic text-white text-2xl mb-2">Modern</h3>
+              <p className="text-sm text-white/50">Aesthetics that align with 2024 luxury and premium design standards.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="liquid-glass-strong rounded-3xl p-12 md:p-16 text-center max-w-5xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-heading italic text-white mb-6">Need a website that works?</h2>
+          <p className="text-white/60 mb-10 max-w-xl mx-auto">
+            Get a free quote for your project. We typically deliver initial concepts within 5-7 business days.
           </p>
           <Link
             href="/contact"
-            className="inline-flex justify-center items-center rounded-full bg-[#1266F1] px-8 py-4 text-base font-semibold text-white shadow-sm hover:bg-blue-600 transition-all"
+            className="bg-white text-black rounded-full px-8 py-4 text-base font-medium hover:scale-105 transition-transform inline-flex items-center gap-2"
           >
-            Start Your Project
+            Request a Quote <ArrowUpRight className="w-5 h-5" />
           </Link>
         </div>
-      </section>
+      </div>
     </div>
   );
 }

@@ -17,11 +17,14 @@ export default function Header() {
       
       <div className="hidden md:flex items-center liquid-glass rounded-full px-1.5 py-1 pointer-events-auto">
         <Link href="/" className="px-3 py-2 text-sm font-medium text-white/90 font-body hover:text-white transition-colors">Home</Link>
+        <Link href="/about" className="px-3 py-2 text-sm font-medium text-white/90 font-body hover:text-white transition-colors">About</Link>
         <Link href="/services" className="px-3 py-2 text-sm font-medium text-white/90 font-body hover:text-white transition-colors">Services</Link>
-        <Link href="/#capabilities" className="px-3 py-2 text-sm font-medium text-white/90 font-body hover:text-white transition-colors">Work</Link>
-        <Link href="/#how-it-works" className="px-3 py-2 text-sm font-medium text-white/90 font-body hover:text-white transition-colors">Process</Link>
+        <Link href="/website-design" className="px-3 py-2 text-sm font-medium text-white/90 font-body hover:text-white transition-colors whitespace-nowrap">Web Design</Link>
+        <Link href="/seo" className="px-3 py-2 text-sm font-medium text-white/90 font-body hover:text-white transition-colors">SEO</Link>
+        <Link href="/landing-pages" className="px-3 py-2 text-sm font-medium text-white/90 font-body hover:text-white transition-colors whitespace-nowrap">Landing Pages</Link>
         <Link href="/#pricing" className="px-3 py-2 text-sm font-medium text-white/90 font-body hover:text-white transition-colors">Pricing</Link>
-        <Link href="/contact" className="bg-white text-black rounded-full px-3.5 py-1.5 text-sm flex items-center font-medium ml-2 transition-transform hover:scale-105">
+        <Link href="/contact" className="px-3 py-2 text-sm font-medium text-white/90 font-body hover:text-white transition-colors">Contact</Link>
+        <Link href="/contact" className="bg-white text-black rounded-full px-3.5 py-1.5 text-sm flex items-center font-medium ml-2 transition-transform hover:scale-105 whitespace-nowrap">
           Get Started <ArrowUpRight className="ml-1 w-4 h-4" />
         </Link>
       </div>
@@ -37,13 +40,15 @@ export default function Header() {
 
       {mobileMenuOpen && (
         <div className="absolute top-16 left-4 right-4 liquid-glass rounded-2xl p-4 flex flex-col gap-2 pointer-events-auto md:hidden border border-white/10">
-          <Link href="/" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 text-sm font-medium text-white font-body hover:bg-white/5 rounded-xl transition-colors">Home</Link>
-          <Link href="/services" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 text-sm font-medium text-white font-body hover:bg-white/5 rounded-xl transition-colors">Services</Link>
-          <Link href="/#capabilities" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 text-sm font-medium text-white font-body hover:bg-white/5 rounded-xl transition-colors">Work</Link>
-          <Link href="/#how-it-works" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 text-sm font-medium text-white font-body hover:bg-white/5 rounded-xl transition-colors">Process</Link>
-          <Link href="/#pricing" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 text-sm font-medium text-white font-body hover:bg-white/5 rounded-xl transition-colors">Pricing</Link>
+          <Link href="/" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 text-sm font-medium text-white font-body hover:bg-white/5 rounded-xl transition-colors border-b border-white/5">Home</Link>
+          <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 text-sm font-medium text-white font-body hover:bg-white/5 rounded-xl transition-colors border-b border-white/5">About</Link>
+          <Link href="/services" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 text-sm font-medium text-white font-body hover:bg-white/5 rounded-xl transition-colors border-b border-white/5">Services</Link>
+          <Link href="/website-design" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 text-sm font-medium text-white font-body hover:bg-white/5 rounded-xl transition-colors border-b border-white/5">Web Design</Link>
+          <Link href="/seo" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 text-sm font-medium text-white font-body hover:bg-white/5 rounded-xl transition-colors border-b border-white/5">SEO</Link>
+          <Link href="/landing-pages" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 text-sm font-medium text-white font-body hover:bg-white/5 rounded-xl transition-colors border-b border-white/5">Landing Pages</Link>
+          <Link href="/#pricing" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 text-sm font-medium text-white font-body hover:bg-white/5 rounded-xl transition-colors border-b border-white/5">Pricing</Link>
           <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="px-4 py-3 text-sm font-medium text-white font-body hover:bg-white/5 rounded-xl transition-colors">Contact</Link>
-          <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="bg-white text-black rounded-xl px-4 py-3 mt-2 text-sm flex items-center justify-center font-medium">
+          <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="bg-white text-black rounded-xl px-4 py-3 mt-2 text-sm flex items-center justify-center font-medium transition-transform active:scale-95">
             Get Started <ArrowUpRight className="ml-1 w-4 h-4" />
           </Link>
         </div>
