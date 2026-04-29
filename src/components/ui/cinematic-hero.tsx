@@ -26,7 +26,7 @@ export function CinematicHero({
 }: CinematicHeroProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const fadingOutRef = useRef(false);
-  const animationFrameRef = useRef<number>();
+  const animationFrameRef = useRef<number | null>(null);
 
   useEffect(() => {
     const video = videoRef.current;

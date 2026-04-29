@@ -73,8 +73,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. START SECTION */}
-      <section className="relative w-full min-h-[500px] flex items-center justify-center py-32 bg-black">
+      {/* 2. START SECTION (Process) */}
+      <section id="how-it-works" className="relative w-full min-h-[500px] flex items-center justify-center py-32 bg-black">
         <HlsVideo 
           src="https://stream.mux.com/9JXDljEVWYwWu01PUkAemafDugK89o01BR6zqJ3aS9u00A.m3u8"
           autoPlay loop muted playsInline
@@ -99,8 +99,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. FEATURES CHESS */}
-      <section className="relative w-full py-24 bg-black px-6 md:px-12 lg:px-24">
+      {/* 3. FEATURES CHESS (Work/Capabilities) */}
+      <section id="capabilities" className="relative w-full py-24 bg-black px-6 md:px-12 lg:px-24">
         <div className="max-w-7xl mx-auto flex flex-col items-center text-center mb-24">
           <div className="liquid-glass rounded-full px-3.5 py-1 text-xs font-medium text-white font-body mb-6">
             Capabilities
@@ -239,8 +239,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 7. CTA + FOOTER */}
-      <section className="relative w-full pt-32 pb-8 bg-black flex flex-col justify-between">
+      {/* 7. CTA + FOOTER (Pricing) */}
+      <section id="pricing" className="relative w-full pt-32 pb-8 bg-black flex flex-col justify-between">
         <HlsVideo 
           src="https://stream.mux.com/8wrHPCX2dC3msyYU9ObwqNdm00u3ViXvOSHUMRYSEe5Q.m3u8"
           autoPlay loop muted playsInline
